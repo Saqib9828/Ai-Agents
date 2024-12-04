@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Suggestion Agent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .ingredients {
+            background-color: #e7f3fe;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .missing-ingredients {
+            background-color: #f8d7da;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .recipe-instructions {
+            background-color: #f1f8ff;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .health-benefits {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .question {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Your Personal Recipe Agent</h1>
+
+        <!-- Dynamic time-based message -->
+        <p><strong>Hey, it's late at night! You need something quick and light. Here's an idea: a spicy scrambled egg snack!</strong></p>
+
+        <button class="button" onclick="showRecipe()">Yes, tell me what I can cook!</button>
+
+        <div id="recipeSection" style="display:none;">
+            <h2>Late Night Snack: Quick Spicy Scrambled Eggs</h2>
+
+            <div class="ingredients">
+                <h3>Ingredients You Have:</h3>
+                <ul>
+                    <li>Olive Oil</li><li>Turmeric Powder</li><li>Salt</li><li>Red Chilly Powder</li><li>Sugar</li><li>Mustard Oil</li><li>Honey</li><li>Yogurt</li><li>Milk</li><li>Mango Juice</li><li>Eggs</li><li>Onion</li><li>Tomato</li><li>Lime</li><li>Frozen Chicken</li>
+                </ul>
+            </div>
+
+            
+
+            <div class="recipe-instructions">
+                <h3>Recipe Instructions:</h3>
+                <ol>
+                    <li>Prepare Chicken: Thaw frozen chicken if necessary. Cut into small pieces.</li>
+                    <li>Cook Eggs: Heat olive oil in a pan and scramble the eggs. Set aside.</li>
+                    <li>Stir-fry Onion & Tomato: Add olive and mustard oil to the pan. Cook onions until golden, add tomatoes and cook until soft.</li>
+                    <li>Cook Chicken: Add chicken, cook until golden and fully cooked (about 8-10 minutes). Season with turmeric, red chili powder, and salt.</li>
+                    <li>Mix Yogurt & Honey: Whisk yogurt with honey, lime juice, and a pinch of sugar. Add to the pan and simmer for 3-4 minutes.</li>
+                    <li>Finish: Add scrambled eggs back, mix well, adjust seasoning, and serve.</li>
+                </ol>
+            </div>
+
+            <div class="health-benefits">
+                <p class="question">Would you like to know the health benefits of the ingredients?</p>
+                <button class="button" onclick="showHealthBenefits()">Yes, tell me more!</button>
+            </div>
+
+            <div id="healthBenefitsSection" style="display:none;">
+                <h3>Health Benefits:</h3>
+                <ul>
+                    <li><strong>Olive Oil:</strong> Rich in healthy fats and antioxidants.</li>
+                    <li><strong>Turmeric:</strong> Contains anti-inflammatory properties.</li>
+                    <li><strong>Yogurt:</strong> High in probiotics, supports gut health.</li>
+                    <li><strong>Eggs:</strong> Excellent source of protein and vitamins.</li>
+                    <li><strong>Chicken:</strong> Lean protein for muscle growth and repair.</li>
+                    <li><strong>Honey:</strong> Contains antioxidants and antibacterial properties.</li>
+                    <li><strong>Lime:</strong> Boosts immunity and improves skin health.</li>
+                    <li><strong>Mustard Oil:</strong> Contains omega-3 fatty acids for heart health.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRecipe() {
+            document.getElementById("recipeSection").style.display = "block";
+        }
+
+        function showHealthBenefits() {
+            document.getElementById("healthBenefitsSection").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
